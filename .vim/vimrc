@@ -1,0 +1,53 @@
+execute pathogen#infect()
+
+filetype on
+syntax on
+colorscheme Tomorrow-Night
+
+
+" Mapleader to reduce conflicts in configuration
+let mapleader=" "
+
+" Automatic .vimrc reload
+map <leader>s :source ~/.vimrc<CR>
+" more history
+set hidden
+set history=100
+
+" indentation, 4 spaces
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set textwidth=100
+set expandtab
+set autoindent
+set fileformat=unix
+
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+" highlight searches
+
+set hlsearch
+
+" cancel search with <Esc>
+nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+set showmatch
+
+set encoding=utf-8
+set number
+
+" gitgutter colum
+let g:gitgutter_sign_column_always=1
+
+set clipboard=unnamedplus
+
+" adding vimfugitive sheit
+let g:github_enterprise_urls = ['http://github.rl.lan']
+
+" autoformat mapping
+noremap <F3> :Autoformat<CR>
+
+" Flake8, <F7> is for manual call
+autocmd BufWritePost *.py call Flake8()

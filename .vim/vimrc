@@ -23,6 +23,9 @@ set expandtab
 set autoindent
 set fileformat=unix
 
+" for continuous queries
+au BufNewFile,BufRead *.cq set textwidth=5000
+
 au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2
     \ set softtabstop=2
@@ -50,4 +53,19 @@ let g:github_enterprise_urls = ['http://github.rl.lan']
 noremap <F3> :Autoformat<CR>
 
 " Flake8, <F7> is for manual call
-autocmd BufWritePost *.py call Flake8()
+" autocmd BufWritePost *.py call Flake8()
+" conflict with python-rac
+
+" ropevim
+let ropevim_vim_completion=1
+let ropevim_extended_complete=1
+autocmd FileType python setlocal omnifunc=RopeCompleteFunc
+
+" piss off with vim splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright

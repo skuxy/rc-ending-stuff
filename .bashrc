@@ -8,7 +8,7 @@ fi
 #txtred="\[\e[1;32m\]"
 #txtcyn="\[\e[1;33m\]"
 
-export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\\npucaj$ "
+export PS1="\\n\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\\npucaj$ "
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
@@ -23,9 +23,8 @@ alias branches="git branch -v"
 alias remotes="git remote -v"
 alias denter="ssh root@development"
 alias menter="ssh piss@off"
-alias towork="cd ~/work/workfolder && ll"
+alias towork="cd ~/work/folder_dinamo_hajduk.com && ll"
 alias tofer="cd ~/Documents/FER"
-export KAPACITOR_URL=http://nope.some.secret.url:9092
 
 export PYTHONIOENCODING=utf-8
 
@@ -59,9 +58,6 @@ alias rgrep="recursiveGrep"
 
 alias copy="xclip -selection clipboard"
 
-export PATH=$PATH:/opt/pycharm-2017.1.1/bin
-export PATH=$PATH:/home/skux/Projects/hub/bin
-
 alias git="hub"
 
 function cd_
@@ -72,3 +68,20 @@ function cd_
 
 cd `cat ~/.last_dir`
 
+function rldesk
+{
+    echo "nes razbojnice"
+}
+
+function volumeup
+{
+    amixer -q sset 'Master' 5%+
+}
+
+function volumedown
+{
+    amixer -q sset 'Master' 5%-
+}
+
+# Python autocomplete
+export PYTHONSTARTUP=~/.pythonrc

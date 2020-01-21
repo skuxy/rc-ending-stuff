@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/skux/Superbet/betting.cashout.infrastructure/kubernetes/calculator-engine'
+let g:netrw_dirhist_8='/home/skux/Superbet/monitoring.infrastructure/20-grafana/20-grafana-chart/betting-pl/stage'
+let g:netrw_dirhist_7='/etc/openvpn/client'
+let g:netrw_dirhist_6='/home/skux/Superbet/ci_research/ci.test.infrastructure/helloapp/templates'
+let g:netrw_dirhist_5='/home/skux/Superbet/monitoring.infrastructure/20-grafana/30-dashboards/betting-pl/cashout'
+let g:netrw_dirhist_4='/etc/NetworkManager/system-connections'
+let g:netrw_dirhist_3='/home/skux/Projects/rc-ending-stuff/i3'
+let g:netrw_dirhist_2='/home/skux/Projects/rc-ending-stuff'
+let g:netrw_dirhist_1='/home/skux/Superbet/monitoring.infrastructure/20-grafana/30-dashboards/betting-pl/cashout'
